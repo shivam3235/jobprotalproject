@@ -1,0 +1,63 @@
+{% extends "empbase.html" %}
+
+
+{% block title %}
+<title>Jobseeker Profile</title>
+{% endblock %}
+
+{% block body %}
+<h4 class="my-2" style="color:cornsilk;text-align:center;"><b>Applicant Full Profile</b></h4>
+
+<table border:="1" style="width:80%;margin:0 auto;">
+    <tr>
+        <th>Name</th>
+        <td>{{obj.name}}</td>
+    </tr>
+
+       <tr>
+        <th>Gender</th>
+        <td>{{obj.gender}}</td>
+    </tr>
+       <tr>
+        <th>Address</th>
+        <td>{{obj.address}}</td>
+    </tr>
+
+       <tr>
+        <th>Contact Number</th>
+        <td>{{obj.contactno}}</td>
+    </tr>
+       <tr>
+        <th>Email Address</th>
+        <td>{{obj.emailaddress}}</td>
+    </tr>
+       <tr>
+        <th>Date Of Birth</th>
+        <td>{{obj.dob}}</td>
+    </tr>
+
+       <tr>
+        <th>qualification</th>
+        <td>{{obj.qualfication}}</td>
+    </tr>
+
+    <tr>
+        <th>Exprience</th>
+        <td>{{obj.exprience}}</td>
+    </tr>
+
+
+     <tr>
+        <th>KeySkills</th>
+        <td>{{obj.keyskills}}</td>
+    </tr>
+
+     <tr>
+        <th>Applied Date</th>
+        <td>{{obj.applieddate}}</td>
+    </tr>
+
+
+
+</table>
+{% endblock body %}

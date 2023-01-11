@@ -1,0 +1,25 @@
+{% extends "jobbase.html" %}
+
+
+{% block title %}
+<title>Jobseeker Home</title>
+{% endblock %}
+
+{% block body %}
+<h2>Job Seeker</h2>
+<p>A job seeker is an unemployed individual who is actively searching for a job opportunity. In recruitment language,
+    the term. The job seeker is often utilized in the hiring process. There are multiple types of job seekers by nature
+
+Non-active job seekers those job seekers who are not thinking anything about employment  and not looking for any job
+Monitors: these are the job seekers who are directly not looking for any job opportunity but monitoring the recruiters’
+    activities on regular basis to keep information about current opportunities in the market
+Active or seekers their job seekers are the most popular ones as they seek a job and actively search for one.</p>
+
+<h2>Job Seeker Application Form</h2>
+<a  href="{% url 'applyjob' %}">Apply Job</a>
+<p>An application for employment is a standard business document that is prepared with questions deemed relevant by
+    employers. It is used to determine the best candidate to fill a specific role within the company.</p>
+<p>A job application is an official form that employers ask all applicants for a position to fill out. You may fill out
+    the application through a third-party job listing site or by visiting the website of the potential employer</p>
+
+{% endblock body %}

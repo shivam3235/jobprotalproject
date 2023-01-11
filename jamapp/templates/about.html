@@ -1,0 +1,33 @@
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+<title>About</title>
+{% endblock %}
+
+{% block body%}
+<div class="my-2 ">
+<h2 class="text-center bg-light">
+   <u><b>About My Project Report</b></u>
+    </h2>
+    <div class="row">
+        <div class="col-sm-5">
+            <img src="{% static 'images/shivam1.jpg' %}" class="rounded" style="height:200px;width:auto">
+            <h3 class="text-center" style="color:cyam;">Mr. Shivam prajapati</h3>
+        </div>
+        <div class="col-sm-7">
+    <p class="my-2">
+        The project report is to find the job and Post the job. It’s too difficult for a
+        common person who doesn’t have expertise in this field because of its complicated project
+        documentation and calculation. myprojectreport.com is the initiative of<b> Mr. Shivam prajapati.</b>
+        He himself is involved in promoting small business ideas so that no youth remains unemployed.
+        shivam runs two successful YouTube channels as well as owns several start-ups apart
+        from My project report.
+    </p>
+    
+            </div>
+        </div>
+</div>
+{% endblock body %}

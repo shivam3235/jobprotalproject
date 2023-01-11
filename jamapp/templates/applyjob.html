@@ -1,0 +1,73 @@
+{% extends "jobbase.html" %}
+
+
+{% block title %}
+<title>Apply Job</title>
+{% endblock %}
+
+{% block body %}
+<h4 class="my-2" style="color:cornsilk;text-align:center;">
+    <b>Jobs List For You</b>
+</h4>
+
+<div style="width:100;">
+    <table border:="2" style="margin:0 auto;width:60%;">
+
+        {% for j in jb %}
+        <tr>
+            <td>Firm Name</td>
+            <td>{{j.firmname}}</td>
+        </tr>
+        <tr>
+            <td>Job Title</td>
+            <td>{{j.jobtitle}}</td>
+        </tr>
+
+        <tr>
+            <td>Post</td>
+            <td>{{j.post}}</td>
+        </tr>
+
+        <tr>
+            <td>Job Description</td>
+            <td>{{j.jobdesc}}</td>
+        </tr>
+
+        <tr>
+            <td>Qualification</td>
+            <td>{{j.qualification}}</td>
+        </tr>
+        <tr>
+            <td>Exprience</td>
+            <td>{{j.experience}}</td>
+        </tr>
+
+        <tr>
+            <td>Location</td>
+            <td>{{j.location}}</td>
+        </tr>
+
+        <tr>
+            <td>Package</td>
+            <td>{{j.salarypa}}</td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+                <a href="{% url 'appliedjobs' id=j.id %}">Apply</a>
+                <br>
+                <br>
+                <br>
+            </td>
+
+        </tr>
+
+
+        {%  endfor %}
+
+    </table>
+
+</div>
+
+{% endblock body %}

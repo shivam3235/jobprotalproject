@@ -1,0 +1,64 @@
+{% extends "empbase.html" %}
+
+
+{% block title %}
+<title>Post Job</title>
+{% endblock %}
+
+{% block body %}
+<h4 class="my-2" style="color:blue;text-align:center">
+    <b><u>Post A Job</u></b>
+</h4>
+    {% if msg %}
+    <p style="text-align:center"> {{msg}}</p>
+    {% endif %}
+<div style="width:60%;margin:0 auto;">
+    <form action="{% url 'pjob'%}" method="post">
+        <ol>
+        {% csrf_token %}
+        <div class="form-group">
+           <li><label>Job Title</label></li>
+            <input type="text" name="jobtitle" class="form-control" required="true">
+        </div>
+
+        <div class="form-group">
+           <li>  <label>Post</label></li>
+            <input type="text" name="post" class="form-control" required="true">
+        </div>
+
+        <div class="form-group">
+            <li> <label>Job Description</label></li>
+            <textarea  name="jobdesc" class="form-control"></textarea>
+        </div>
+
+        <div class="form-group">
+            <li> <label>Qualification</label></li>
+            <input type="text" name="qualification" class="form-control" required="true">
+        </div>
+
+        <div class="form-group">
+            <li> <label>Exprience</label></li>
+            <input type="text" name="experience" class="form-control" required="true">
+        </div>
+
+        <div class="form-group">
+            <li> <label>Location</label></li>
+            <input type="text" name="location" class="form-control" required="true">
+        </div>
+
+        <div class="form-group">
+           <li>  <label>Salary Per anum</label></li>
+            <input type="number" name="salarypa" class="form-control" required="true">
+        </div>
+
+
+         <button type="submit" value="submit" class="btn btn-info form-control my-3">Submit</button>
+
+</ol>
+
+
+    </form>
+
+
+</div>
+{% endblock body %}

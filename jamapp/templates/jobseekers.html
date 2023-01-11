@@ -1,0 +1,45 @@
+{% extends "adminbase.html" %}
+
+
+{% block body %}
+<h4 class="my-2" style="color:cornsilk;text-align:center;">
+    <u><b>Jobseeker managment</b></u>
+</h4>
+
+<div style="width:100%;overflow-x:scroll ;">
+    <br/>
+    <br/>
+    <table border:="1" style="width:100%;margin:0 auto;">
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>contact no</th>
+            <th>Email Address</th>
+            <th>Date Of Birth</th>
+            <th>Qualification</th>
+            <th>Exprience</th>
+            <th>KeySkills</th>
+            <th>Registration Date</th>
+        </tr>
+
+        {% for e in js %}
+        <tr>
+            <td>{{e.name}}</td>
+            <td>{{e.gender}}</td>
+            <td>{{e.address}}</td>
+            <td>{{e.contactno}}</td>
+            <td>{{e.email}}</td>
+            <td>{{e.dob}}</td>
+            <td>{{e.qualfication}}</td>
+            <td>{{e.exprience}}</td>
+            <td>{{e.keyskills}}</td>
+            <td>{{e.regdate}}</td>
+        </tr>
+        {% endfor %}
+
+
+
+    </table>
+</div>
+{% endblock body %}

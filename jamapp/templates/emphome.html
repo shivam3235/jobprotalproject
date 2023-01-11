@@ -1,0 +1,26 @@
+{% extends "empbase.html" %}
+
+
+{% block title %}
+<title>Emp Home</title>
+{% endblock %}
+
+{% block body %}
+
+<h2>Home Page</h2>
+<p>In this site you can post the job and see the detail of the joobseker registretion and you allowed to
+called the interview and you can change the password and logout the this applicant form </p>
+<h2> Post Job</h2>
+<a href="{% url 'postjob'%}">Post job</a><br>
+<p>Jobs seekers explore a wide variety of avenues to find work. They ask family and friends for word
+    of mouth referrals, visit businesses that they're interested in and ask about openings, and seek help
+    from community career service agents or recruiters. They also seek out opportunities by reviewing offline
+    and online job postings.</p>
+
+<h2>Manage Applicants</h2>
+<a href="{% url 'manageapp' %}">Manage Applicants</a>
+<p>To access the Manage Applicants page, go to Recruit > Manage Requisition. On the Manage Job Requisitions page,
+    locate the requisition for which you would like to manage candidates. From there, click the linked number of
+    candidates in the Applicants column</p>
+
+{% endblock body %}
